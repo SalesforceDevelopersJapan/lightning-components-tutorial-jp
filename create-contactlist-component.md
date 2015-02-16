@@ -3,7 +3,7 @@ layout: module
 title: Module 4&#58; Creating the ContactList Component
 ---
 
-In this module, you create a Lightning Component responsible for displaying the list of contacts and you use the ContactList component to the QuickContacts component.
+In this module, you create a Lightning Component responsible for displaying the list of contacts and you add the ContactList component to the QuickContacts component.
 
 ## What you will learn
 - Use component attributes
@@ -38,7 +38,7 @@ In this module, you create a Lightning Component responsible for displaying the 
     ```
 
     ### Code Highlights:
-    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
+    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 2.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
     - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
 **client-side controller** (you'll implement the controller in the next step).
@@ -81,7 +81,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 
 1. In the developer console, go back to the **QuickContacts** component.
 
-    If you don't see the tab in the developer console, select **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **COMPONENT** in the dialog, and click the **Open Selected** button.
+    If you don't see the tab in the developer console, click **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **COMPONENT** in the dialog, and click the **Open Selected** button.
 
     ![](images/lightning-resources.jpg)
 
@@ -96,6 +96,8 @@ In this module, you create a Lightning Component responsible for displaying the 
     </aura:component>
     ```
 
+    > **c:** is the default namespace for Lightning components
+
 1. Click **File** > **Save** to save the file
 
 1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes:
@@ -105,7 +107,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 
 ## Step 4: Style the ContactList Component
 
-In this step, you'll add some CSS styles to the component to make it look more like a standard mobile list. You'll remove the item bullets, add a horizontal line between items, and fine tune margins.
+In this step, you'll add some CSS styles to the component to make it look like a standard mobile list. You'll remove the item bullets, add a horizontal line between items, and fine tune margins.
 
 
 1. Click **STYLE**

@@ -52,7 +52,7 @@ In this module, you create the QuickContacts Lightning Component.
     ![](images/mobile_nav.jpg)
     - Select **Quick Contacts** in the **Available** list
     - Click **Add**
-    - Select  **Quick Contacts** in the **Selected List**, and click the **Up** button to move the tab up in the menu order
+    - Select  **Quick Contacts** in the **Selected** List, and click the **Up** button to move the tab up in the menu order
     - Click **Save**
 
 
@@ -64,9 +64,11 @@ In this module, you create the QuickContacts Lightning Component.
     - Remove the part of the URL that comes immediately after salesforce.com
     - Append /one/one.app to the URL immediately after salesforce.com
 
+    > This starts the Salesforce1 Application simulator
+
 1. Click the menu button in the upper left corner
 
-1. Select Quick Contacts in the menu
+1. Select **Quick Contacts** in the menu
 
     ![](images/s1menu.jpg)
 
