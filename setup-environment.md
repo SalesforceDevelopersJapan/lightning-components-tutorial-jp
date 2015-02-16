@@ -11,26 +11,7 @@ In this module, you set up your environment to enable Lightning development.
 - Upload Static Resources for use in your Lightning application
 
 
-## Step 1: Create a Namespace
-
-A namespace is globally unique across all Salesforce organizations. Namespaces are case-insensitive and have a maximum length of 15 alphanumerical characters.
-
-1. Login to your Salesforce Developer Edition
-
-1. Click **Setup** (upper right corner)
-
-1. Click **Create** > **Packages** (left navigation)
-
-1. Click **Edit** and **Continue**
-
-1. Enter the namespace prefix you want to register, and click **Check Availability**. If the namespace you entered is not available, try again until you find a namespace that is available.
-
-1. Click **Review My Selections**
-
-1. Click **Save**
-
-
-## Step 2: Enable Lightning Components
+## Step 1: Enable Lightning Components
 
 1. In Setup, click **Develop** > **Lightning Components**
 
@@ -41,7 +22,7 @@ A namespace is globally unique across all Salesforce organizations. Namespaces a
 1. Click **Save**
 
 
-## Step 3: Upload Bootstrap as a Static Resource
+## Step 2: Upload Bootstrap as a Static Resource
 
 To help you make the application look good, you will use a version of Twitter Bootstrap customized to match the [Salesforce1 guideline](http://sfdc-styleguide.herokuapp.com/).
 

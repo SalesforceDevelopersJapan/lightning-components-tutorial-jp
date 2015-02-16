@@ -59,14 +59,12 @@ Now that we decided to build SearchBar and ContactList as two separate component
     ```
     ({
         searchKeyChange: function(component, event, helper) {
-            var myEvent = $A.get("e.yournamespace:SearchKeyChange");
+            var myEvent = $A.get("e.c:SearchKeyChange");
             myEvent.setParams({"searchKey": event.target.value});
             myEvent.fire();
         }
     })
     ```
-
-    > Make sure you prefix SearchKeyChange with **your own namespace** you created in module 2.
 
     ### Code Highlights:
     - The function first gets an instance of the **SearchKeyChange** event
@@ -83,11 +81,8 @@ Now that we decided to build SearchBar and ContactList as two separate component
 1. Add an event handler for the **SearchKeyChange** event (right after the init handler):
 
     ```
-    <aura:handler event="yournamespace:SearchKeyChange" action="{!c.searchKeyChange}"/>
+    <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}"/>
     ```
-
-    > Make sure you prefix SearchKeyChange with **your own namespace** you created in module 2.
-
 
     ### Code Highlight:
     - The handler is set up to execute the **searchKeyChange()** function in the controller
@@ -121,9 +116,9 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
 1. Click **File** > **Save** to save the file
 
-## Step 5: Add SearchBar to the Application
+## Step 5: Add SearchBar to the QuickContacts Component
 
-1. In the developer console, go back to the **QuickContacts** application
+1. In the developer console, go back to the **QuickContacts** component
 
 1. Modify the div container as follows to add the SearchBar component to the user interface
 
@@ -131,20 +126,18 @@ Now that we decided to build SearchBar and ContactList as two separate component
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <yournamespace:SearchBar/>
-                <yournamespace:ContactList/>
+                <c:SearchBar/>
+                <c:ContactList/>
             </div>
         </div>
     </div>
     ```
 
-    > Make sure you prefix SearchBar and ContactList with **your own namespace** you created in module 2.
-
 1. Click **File** > **Save** to save the file
 
-1. Click **Update Preview** to preview the application in the browser
+1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes. Type a few characters in the search bar to search for contacts.
 
-    ![](images/app-v4.png)
+    ![](images/version4.jpg)
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">

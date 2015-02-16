@@ -125,16 +125,12 @@
 <li><p>Implement the Controller as follows:</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">({
     searchKeyChange: function(component, event, helper) {
-        var myEvent = $A.get(&quot;e.yournamespace:SearchKeyChange&quot;);
+        var myEvent = $A.get(&quot;e.c:SearchKeyChange&quot;);
         myEvent.setParams({&quot;searchKey&quot;: event.target.value});
         myEvent.fire();
     }
 })
 </code></pre></div>
-<blockquote>
-<p>Make sure you prefix SearchKeyChange with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote>
-
 <h3>Code Highlights:</h3>
 
 <ul>
@@ -150,12 +146,8 @@
 <ol>
 <li><p>In the Developer Console, go back to the <strong>ContactList</strong> component</p></li>
 <li><p>Add an event handler for the <strong>SearchKeyChange</strong> event (right after the init handler):</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:handler event=&quot;yournamespace:SearchKeyChange&quot; action=&quot;{!c.searchKeyChange}&quot;/&gt;
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:handler event=&quot;c:SearchKeyChange&quot; action=&quot;{!c.searchKeyChange}&quot;/&gt;
 </code></pre></div>
-<blockquote>
-<p>Make sure you prefix SearchKeyChange with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote>
-
 <h3>Code Highlight:</h3>
 
 <ul>
@@ -189,27 +181,24 @@
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 5: Add SearchBar to the Application</h2>
+<h2>Step 5: Add SearchBar to the QuickContacts Component</h2>
 
 <ol>
-<li><p>In the developer console, go back to the <strong>QuickContacts</strong> application</p></li>
+<li><p>In the developer console, go back to the <strong>QuickContacts</strong> component</p></li>
 <li><p>Modify the div container as follows to add the SearchBar component to the user interface</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-12&quot;&gt;
-            &lt;yournamespace:SearchBar/&gt;
-            &lt;yournamespace:ContactList/&gt;
+            &lt;c:SearchBar/&gt;
+            &lt;c:ContactList/&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div>
-<blockquote>
-<p>Make sure you prefix SearchBar and ContactList with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote></li>
+</code></pre></div></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-<li><p>Click <strong>Update Preview</strong> to preview the application in the browser</p>
+<li><p>Go back to the Salesforce1 app and reload <strong>Quick Contacts</strong> from the menu to see the changes. Type a few characters in the search bar to search for contacts.</p>
 
-<p><img src="images/app-v4.png" alt=""></p></li>
+<p><img src="images/version4.jpg" alt=""></p></li>
 </ol>
 
 <div class="row" style="margin-top:40px;">
@@ -253,10 +242,9 @@
                 <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
                 <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
                 <li><a href="create-apex-controller.html">Creating a Lightning-Enabled Apex Controller</a></li>
-                <li><a href="create-lightning-application.html">Creating the Application</a></li>
+                <li><a href="create-lightning-application.html">Creating the QuickContacts Component</a></li>
                 <li><a href="create-contactlist-component.html">Creating the ContactList Component</a></li>
                 <li><a href="create-searchbar-component.html">Creating the SearchBar Component</a></li>
-                <li><a href="create-contactdetails-component.html">Creating the ContactDetails Component</a></li>
             </ol>
             <hr/>
             <div style="margin: -8px 0 12px 14px">

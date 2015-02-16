@@ -3,13 +3,12 @@ layout: module
 title: Module 5&#58; Creating the ContactList Component
 ---
 
-In this module, you create a Lightning Component responsible for displaying the list of contacts and you add that component to the QuickContacts application.
+In this module, you create a Lightning Component responsible for displaying the list of contacts and you use the ContactList component to the QuickContacts component.
 
 ## What you will learn
-- Create a Lightning Component in the Developer Console
 - Use component attributes
 - Use event handlers
-- Use Lightning Components in a Lightning Application
+- Use a Lightning Component in another Lightning Component
 
 
 ## Step 1: Create the Component
@@ -19,7 +18,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 2. Implement the component as follows:
 
     ```
-    <aura:component controller="yournamespace.ContactController">
+    <aura:component controller="ContactController">
 
         <aura:attribute name="contacts" type="Contact[]"/>
         <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
@@ -38,15 +37,12 @@ In this module, you create a Lightning Component responsible for displaying the 
     </aura:component>
     ```
 
-    > Make sure you prefix the controller name with **your own namespace** you created in module 2.
-
     ### Code Highlights:
     - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 3.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
     - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
 **client-side controller** (you'll implement the controller in the next step).
     - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
-    - The ```<a href="{! '#contact/' + contact.Id }">``` anchor tag around the contact data is defined to set the page hashtag to **#contact/** followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.
 
 
 1. Click **File** > **Save** to save the file.
@@ -81,42 +77,35 @@ In this module, you create a Lightning Component responsible for displaying the 
 1. Click **File** > **Save** to save the file
 
 
-## Step 3: Add ContactList to the Application UI
+## Step 3: Add ContactList to the QuickContacts Component
 
-1. In the developer console, go back to the **QuickContacts** application.
+1. In the developer console, go back to the **QuickContacts** component.
 
-    If you don't see the tab in the developer console, select **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **APPLICATION** in the dialog, and click the **Open Selected** button.
+    If you don't see the tab in the developer console, select **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **COMPONENT** in the dialog, and click the **Open Selected** button.
 
     ![](images/lightning-resources.jpg)
 
 
-1. Modify the **container** div as follows to add the ContactList component to the application layout.
+1. Modify the **container** div as follows to add the ContactList component to the component layout.
 
     ```
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <yournamespace:ContactList/>
+                <c:ContactList/>
             </div>
         </div>
     </div>
     ```
 
-    > Make sure you prefix ContactList with **your own namespace** you created in module 2.
-
-
 1. Click **File** > **Save** to save the file
 
-1. Click **Preview** or **Update Preview**
+1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes:
 
-    ![](images/application-update-preview.jpg)
-
-1. Preview the application in your browser
-
-    ![](images/app-v2.png)
+    ![](images/version2.jpg)
 
 
-## Step 4: Style the Component
+## Step 4: Style the ContactList Component
 
 There is probably too much space above and below the phone number. In this step, you'll add a style to the component to remove the extra space.
 
@@ -135,9 +124,9 @@ There is probably too much space above and below the phone number. In this step,
 
 1. Click **File** > **Save** to save the file
 
-1. In the developer console, go back to the **QuickContacts** application, click **Preview** or **Update Preview** to preview the application in your browser
+1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes:
 
-    ![](images/app-v3.png)
+    ![](images/version3.jpg)
 
 
 

@@ -69,15 +69,14 @@
     <div class="col-xs-12 col-sm-8">
         <h1>Module 5&#58; Creating the ContactList Component</h1>
         <!--<hr/>-->
-        <p>In this module, you create a Lightning Component responsible for displaying the list of contacts and you add that component to the QuickContacts application.</p>
+        <p>In this module, you create a Lightning Component responsible for displaying the list of contacts and you use the ContactList component to the QuickContacts component.</p>
 
 <h2>What you will learn</h2>
 
 <ul>
-<li>Create a Lightning Component in the Developer Console</li>
 <li>Use component attributes</li>
 <li>Use event handlers</li>
-<li>Use Lightning Components in a Lightning Application</li>
+<li>Use a Lightning Component in another Lightning Component</li>
 </ul>
 
 <h2>Step 1: Create the Component</h2>
@@ -85,7 +84,7 @@
 <ol>
 <li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Component</strong>. Specify <strong>ContactList</strong> as the bundle name and click <strong>Submit</strong></p></li>
 <li><p>Implement the component as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;yournamespace.ContactController&quot;&gt;
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component controller=&quot;ContactController&quot;&gt;
 
     &lt;aura:attribute name=&quot;contacts&quot; type=&quot;Contact[]&quot;/&gt;
     &lt;aura:handler name=&quot;init&quot; value=&quot;{!this}&quot; action=&quot;{!c.doInit}&quot; /&gt;
@@ -103,10 +102,6 @@
 
 &lt;/aura:component&gt;
 </code></pre></div>
-<blockquote>
-<p>Make sure you prefix the controller name with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote>
-
 <h3>Code Highlights:</h3>
 
 <ul>
@@ -115,7 +110,6 @@
 <li>The <strong>init</strong> handler is defined to execute some code when the component is initialized. That code (<strong>doInit</strong>) is defined in the component&#39;s
 <strong>client-side controller</strong> (you&#39;ll implement the controller in the next step).</li>
 <li><code>&lt;aura:iteration&gt;</code> is used to iterate through the list of contacts and create an <code>&lt;li&gt;</code> for each contact</li>
-<li>The <code>&lt;a href=&quot;{! &#39;#contact/&#39; + contact.Id }&quot;&gt;</code> anchor tag around the contact data is defined to set the page hashtag to <strong>#contact/</strong> followed by the contact id. In module 7, the ContactDetails component will use that hashtag to display details information every time the user clicks a new contact.</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file.</p></li>
 </ol>
@@ -148,36 +142,30 @@
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 </ol>
 
-<h2>Step 3: Add ContactList to the Application UI</h2>
+<h2>Step 3: Add ContactList to the QuickContacts Component</h2>
 
 <ol>
-<li><p>In the developer console, go back to the <strong>QuickContacts</strong> application.</p>
+<li><p>In the developer console, go back to the <strong>QuickContacts</strong> component.</p>
 
-<p>If you don&#39;t see the tab in the developer console, select <strong>File</strong> &gt; <strong>Open Lightning Resources</strong> in the Developer Console menu, select <strong>QuickContacts</strong> &gt; <strong>APPLICATION</strong> in the dialog, and click the <strong>Open Selected</strong> button.</p>
+<p>If you don&#39;t see the tab in the developer console, select <strong>File</strong> &gt; <strong>Open Lightning Resources</strong> in the Developer Console menu, select <strong>QuickContacts</strong> &gt; <strong>COMPONENT</strong> in the dialog, and click the <strong>Open Selected</strong> button.</p>
 
 <p><img src="images/lightning-resources.jpg" alt=""></p></li>
-<li><p>Modify the <strong>container</strong> div as follows to add the ContactList component to the application layout.</p>
+<li><p>Modify the <strong>container</strong> div as follows to add the ContactList component to the component layout.</p>
 <div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
         &lt;div class=&quot;col-sm-12&quot;&gt;
-            &lt;yournamespace:ContactList/&gt;
+            &lt;c:ContactList/&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre></div>
-<blockquote>
-<p>Make sure you prefix ContactList with <strong>your own namespace</strong> you created in module 2.</p>
-</blockquote></li>
+</code></pre></div></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-<li><p>Click <strong>Preview</strong> or <strong>Update Preview</strong></p>
+<li><p>Go back to the Salesforce1 app and reload <strong>Quick Contacts</strong> from the menu to see the changes:</p>
 
-<p><img src="images/application-update-preview.jpg" alt=""></p></li>
-<li><p>Preview the application in your browser</p>
-
-<p><img src="images/app-v2.png" alt=""></p></li>
+<p><img src="images/version2.jpg" alt=""></p></li>
 </ol>
 
-<h2>Step 4: Style the Component</h2>
+<h2>Step 4: Style the ContactList Component</h2>
 
 <p>There is probably too much space above and below the phone number. In this step, you&#39;ll add a style to the component to remove the extra space.</p>
 
@@ -191,9 +179,9 @@
 }
 </code></pre></div></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-<li><p>In the developer console, go back to the <strong>QuickContacts</strong> application, click <strong>Preview</strong> or <strong>Update Preview</strong> to preview the application in your browser</p>
+<li><p>Go back to the Salesforce1 app and reload <strong>Quick Contacts</strong> from the menu to see the changes:</p>
 
-<p><img src="images/app-v3.png" alt=""></p></li>
+<p><img src="images/version3.jpg" alt=""></p></li>
 </ol>
 
 <div class="row" style="margin-top:40px;">
@@ -237,10 +225,9 @@
                 <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
                 <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
                 <li><a href="create-apex-controller.html">Creating a Lightning-Enabled Apex Controller</a></li>
-                <li><a href="create-lightning-application.html">Creating the Application</a></li>
+                <li><a href="create-lightning-application.html">Creating the QuickContacts Component</a></li>
                 <li><a href="create-contactlist-component.html">Creating the ContactList Component</a></li>
                 <li><a href="create-searchbar-component.html">Creating the SearchBar Component</a></li>
-                <li><a href="create-contactdetails-component.html">Creating the ContactDetails Component</a></li>
             </ol>
             <hr/>
             <div style="margin: -8px 0 12px 14px">

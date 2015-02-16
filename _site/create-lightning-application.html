@@ -67,24 +67,24 @@
 <div class="row">
 
     <div class="col-xs-12 col-sm-8">
-        <h1>Module 4&#58; Creating the Lightning Application</h1>
+        <h1>Module 4&#58; Creating the QuickContacts Lightning Component</h1>
         <!--<hr/>-->
-        <p>In this module, you create the QuickContacts Lightning Application and you use Bootstrap to define a basic layout for the application.</p>
+        <p>In this module, you create the QuickContacts Lightning Component and you use Bootstrap to define a basic layout for the component.</p>
 
 <h2>What you will learn</h2>
 
 <ul>
-<li>Create a Lightning Application in the Developer Console</li>
-<li>Use Static Resources in a Lightning Application</li>
-<li>Preview your Lightning Application in the browser</li>
+<li>Create a Lightning Component in the Developer Console</li>
+<li>Use Static Resources in a Lightning Component</li>
+<li>Preview your Lightning Component in the Salesforce1 Application</li>
 </ul>
 
-<h2>Steps</h2>
+<h2>Step 1: Create the Component</h2>
 
 <ol>
-<li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Application</strong>. Specify <strong>QuickContacts</strong> as the bundle name and click <strong>Submit</strong></p></li>
-<li><p>Implement the application as follows:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:application&gt;
+<li><p>In the Developer Console, click <strong>File</strong> &gt; <strong>New</strong> &gt; <strong>Lightning Component</strong>. Specify <strong>QuickContacts</strong> as the bundle name and click <strong>Submit</strong></p></li>
+<li><p>Implement the component as follows:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component implements=&quot;force:appHostable&quot;&gt;
 
     &lt;link href=&#39;/resource/bootstrap/&#39; rel=&quot;stylesheet&quot;/&gt;
 
@@ -104,22 +104,68 @@
         &lt;/div&gt;
     &lt;/div&gt;
 
-&lt;/aura:application&gt;
+&lt;/aura:component&gt;
 </code></pre></div>
 <h3>Code Highlights:</h3>
 
 <ul>
+<li>The component implements the <strong>force:appHostable</strong> interface to indicate that it can run in the Salesforce1 application</li>
 <li>The <strong>link</strong> tag references the bootstrap style sheet uploaded as a static resource in <a href="setup-environment.html">module 2</a></li>
-<li>The application uses Bootstrap to implement a basic layout for the application</li>
-<li>Lightning applications can include Lightning components and regular HTML markup</li>
+<li>The component uses Bootstrap to implement a basic layout for the component</li>
+<li>Lightning components can include other Lightning components and regular HTML markup</li>
 </ul></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
-<li><p>Click <strong>Preview</strong> (upper right corner)</p>
+</ol>
 
-<p><img src="images/app-preview.jpg" alt=""></p></li>
-<li><p>Preview the application in the browser</p>
+<h2>Step 2: Create a Tab</h2>
 
-<p><img src="images/app-layout.png" alt=""></p></li>
+<ol>
+<li><p>In Setup, click <strong>Create</strong> &gt; <strong>Tabs</strong></p></li>
+<li><p>In the <strong>Lightning Component Tabs</strong> section, click <strong>New</strong></p>
+
+<p><img src="images/lightning-component-tab.jpg" alt=""></p>
+
+<ul>
+<li>Select <strong>c:QuickContacts</strong> as the Lightning Component</li>
+<li>Specify <strong>Quick Contacts</strong> as the Tab Label and <strong>Quick_Contacts</strong> as the Tab Name</li>
+<li>Click the magnifier icon and select <strong>Lightning</strong> as the tab icon</li>
+</ul></li>
+<li><p>Click <strong>Next</strong> and <strong>Save</strong></p></li>
+</ol>
+
+<h2>Step 3: Add the Tab to Mobile Navigation</h2>
+
+<ol>
+<li><p>In Setup, Select <strong>Administer</strong> &gt; <strong>Mobile Administration</strong> &gt; <strong>Mobile Navigation</strong></p>
+
+<p><img src="images/mobile_nav.jpg" alt=""></p>
+
+<ul>
+<li>Select <strong>Quick Contacts</strong> in the <strong>Available</strong> list</li>
+<li>Click <strong>Add</strong></li>
+<li>Select  <strong>Quick Contacts</strong> in the <strong>Selected List</strong>, and click the <strong>Up</strong> button to move the tab up in the menu order</li>
+<li>Click <strong>Save</strong></li>
+</ul></li>
+</ol>
+
+<h2>Step 4: Preview the Component in the Salesforce1 Application</h2>
+
+<ol>
+<li><p>In your browser, modify the URL as follows:</p>
+
+<p><img src="images/oneapp.jpg" alt=""></p>
+
+<ul>
+<li>Remove the part of the URL that comes immediately after salesforce.com</li>
+<li>Append /one/one.app to the URL immediately after salesforce.com</li>
+</ul></li>
+<li><p>Click the menu button in the upper left corner</p></li>
+<li><p>Select Quick Contacts in the menu</p>
+
+<p><img src="images/s1menu.jpg" alt=""></p></li>
+<li><p>Preview the component</p>
+
+<p><img src="images/version1.jpg" alt=""></p></li>
 </ol>
 
 <div class="row" style="margin-top:40px;">
@@ -163,10 +209,9 @@
                 <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
                 <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
                 <li><a href="create-apex-controller.html">Creating a Lightning-Enabled Apex Controller</a></li>
-                <li><a href="create-lightning-application.html">Creating the Application</a></li>
+                <li><a href="create-lightning-application.html">Creating the QuickContacts Component</a></li>
                 <li><a href="create-contactlist-component.html">Creating the ContactList Component</a></li>
                 <li><a href="create-searchbar-component.html">Creating the SearchBar Component</a></li>
-                <li><a href="create-contactdetails-component.html">Creating the ContactDetails Component</a></li>
             </ol>
             <hr/>
             <div style="margin: -8px 0 12px 14px">
