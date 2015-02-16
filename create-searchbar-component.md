@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 6&#58; Creating the SearchBar Component
+title: Module 5&#58; Creating the SearchBar Component
 ---
 
 In this module, you create a SearchBar component that allows the user to search contacts by name. You could add the search bar to the ContactList component, but that would limit the reusability of the component: depending on specific UI requirements, you may want the search bar to be directly on top of the list (like you'll do here), integrated in the header, or somewhere else. You also want the ContactList component to be able to display a list of contacts independently of the type of search bar you use: regular input field with search button, type ahead search, etc. For these reasons, it's a good idea to decouple the search UI, from the display UI, and create two components: ContactList and SearchBar.
@@ -37,8 +37,10 @@ Now that we decided to build SearchBar and ContactList as two separate component
     ```
     <aura:component>
 
-        <input type="text" class="form-control" onkeyup="{!c.searchKeyChange}"
-                placeholder="Search"/>
+        <div>
+            <input type="text" class="form-control"
+                    placeholder="Search" onkeyup="{!c.searchKeyChange}"/>
+        </div>
 
     </aura:component>
     ```
@@ -48,7 +50,6 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
 
 1. Click **File** > **Save** to save the file
-
 
 ## Step 3: Implement the Controller
 
@@ -74,7 +75,31 @@ Now that we decided to build SearchBar and ContactList as two separate component
 1. Click **File** > **Save** to save the file
 
 
-## Step 4: Listen for the SearchKeyChange Event in ContactList
+## Step 4: Style the Component
+
+1. Click **STYLE**
+
+    ![](images/searchbar-style.jpg)
+
+1. Implement the following styles:
+
+    ```
+    .THIS {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .THIS input {
+        width: 100%;
+        padding: 8px;
+        -webkit-appearance: none;
+        border: solid 1px #dddddd;
+    }
+    ```
+
+1. Click **File** > **Save** to save the file
+
+## Step 5: Listen for the SearchKeyChange Event in ContactList
 
 1. In the Developer Console, go back to the **ContactList** component
 
@@ -116,21 +141,19 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
 1. Click **File** > **Save** to save the file
 
-## Step 5: Add SearchBar to the QuickContacts Component
+## Step 6: Add SearchBar to the QuickContacts Component
 
 1. In the developer console, go back to the **QuickContacts** component
 
-1. Modify the div container as follows to add the SearchBar component to the user interface
+1. Add the SearchBar component before the ContactList component:
 
     ```
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <c:SearchBar/>
-                <c:ContactList/>
-            </div>
-        </div>
-    </div>
+    <aura:component implements="force:appHostable">
+
+        <c:SearchBar/>
+        <c:ContactList/>
+
+    </aura:component>
     ```
 
 1. Click **File** > **Save** to save the file
@@ -142,6 +165,6 @@ Now that we decided to build SearchBar and ContactList as two separate component
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
 <a href="create-contactlist-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-contactdetails-component.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="next.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

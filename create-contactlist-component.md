@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 5&#58; Creating the ContactList Component
+title: Module 4&#58; Creating the ContactList Component
 ---
 
 In this module, you create a Lightning Component responsible for displaying the list of contacts and you use the ContactList component to the QuickContacts component.
@@ -23,10 +23,10 @@ In this module, you create a Lightning Component responsible for displaying the 
         <aura:attribute name="contacts" type="Contact[]"/>
         <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
-        <ul class="list-group">
+        <ul>
             <aura:iteration items="{!v.contacts}" var="contact">
-                <li class="list-group-item">
-                    <a href="{! '#contact/' + contact.Id }">
+                <li>
+                    <a href="{! '#/sObject/' + contact.Id + '/view'}">
                         <p>{!contact.Name}</p>
                         <p>{!contact.Phone}</p>
                     </a>
@@ -86,16 +86,14 @@ In this module, you create a Lightning Component responsible for displaying the 
     ![](images/lightning-resources.jpg)
 
 
-1. Modify the **container** div as follows to add the ContactList component to the component layout.
+1. Replace the ContactList placeholder with the actual component:
 
     ```
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <c:ContactList/>
-            </div>
-        </div>
-    </div>
+    <aura:component implements="force:appHostable">
+
+        <c:ContactList/>
+
+    </aura:component>
     ```
 
 1. Click **File** > **Save** to save the file
@@ -107,18 +105,29 @@ In this module, you create a Lightning Component responsible for displaying the 
 
 ## Step 4: Style the ContactList Component
 
-There is probably too much space above and below the phone number. In this step, you'll add a style to the component to remove the extra space.
+In this step, you'll add some CSS styles to the component to make it look more like a standard mobile list. You'll remove the item bullets, add a horizontal line between items, and fine tune margins.
 
 
 1. Click **STYLE**
 
     ![](images/component-style.jpg)
 
-1. Implement the following style:
+1. Implement the following styles:
 
     ```
-    .THIS p {
+    .THIS {
+        list-style-type: none;
+        padding: 0;
         margin: 0;
+    }
+
+    .THIS li {
+        border-bottom: solid 1px #DDDDDD;
+        padding: 8px;
+    }
+
+    .THIS p {
+        margin: 4px;
     }
     ```
 

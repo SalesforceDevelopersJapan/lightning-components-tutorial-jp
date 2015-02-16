@@ -1,13 +1,12 @@
 ---
 layout: module
-title: Module 4&#58; Creating the QuickContacts Lightning Component
+title: Module 3&#58; Creating the QuickContacts Lightning Component
 ---
 
-In this module, you create the QuickContacts Lightning Component and you use Bootstrap to define a basic layout for the component.
+In this module, you create the QuickContacts Lightning Component.
 
 ## What you will learn
 - Create a Lightning Component in the Developer Console
-- Use Static Resources in a Lightning Component
 - Preview your Lightning Component in the Salesforce1 Application
 
 
@@ -20,31 +19,13 @@ In this module, you create the QuickContacts Lightning Component and you use Boo
     ```
     <aura:component implements="force:appHostable">
 
-        <link href='/resource/bootstrap/' rel="stylesheet"/>
-
-        <div class="navbar navbar-default navbar-static-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <a href="#" class="navbar-brand">Lightning Contacts</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    Contact list goes here
-                </div>
-            </div>
-        </div>
+        <p>ContactList goes here</p>
 
     </aura:component>
     ```
 
     ### Code Highlights:
     - The component implements the **force:appHostable** interface to indicate that it can run in the Salesforce1 application
-    - The **link** tag references the bootstrap style sheet uploaded as a static resource in [module 2](setup-environment.html)
-    - The component uses Bootstrap to implement a basic layout for the component
     - Lightning components can include other Lightning components and regular HTML markup
 
 1. Click **File** > **Save** to save the file
@@ -77,7 +58,7 @@ In this module, you create the QuickContacts Lightning Component and you use Boo
 
 ## Step 4: Preview the Component in the Salesforce1 Application
 
-1. In your browser, modify the URL as follows:
+1. In Salesforce, modify the URL as follows:
 
     ![](images/oneapp.jpg)
     - Remove the part of the URL that comes immediately after salesforce.com

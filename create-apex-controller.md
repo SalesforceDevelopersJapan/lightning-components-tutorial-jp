@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 3&#58; Creating the ContactController Class
+title: Module 2&#58; Creating the ContactController Class
 ---
 
 Lightning applications make it easy to work with data. In this module, you create an Apex controller that allows your Lightning application to retrieve contacts, or to search contacts by name or by id.

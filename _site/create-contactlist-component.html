@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Salesforce Lightning Tutorial</title>
+    <title>Lightning Components Tutorial</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -47,7 +47,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">Salesforce Lightning Tutorial</a>
+            <a class="navbar-brand" href="index.html">Lightning Components Tutorial</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -67,7 +67,7 @@
 <div class="row">
 
     <div class="col-xs-12 col-sm-8">
-        <h1>Module 5&#58; Creating the ContactList Component</h1>
+        <h1>Module 4&#58; Creating the ContactList Component</h1>
         <!--<hr/>-->
         <p>In this module, you create a Lightning Component responsible for displaying the list of contacts and you use the ContactList component to the QuickContacts component.</p>
 
@@ -89,10 +89,10 @@
     &lt;aura:attribute name=&quot;contacts&quot; type=&quot;Contact[]&quot;/&gt;
     &lt;aura:handler name=&quot;init&quot; value=&quot;{!this}&quot; action=&quot;{!c.doInit}&quot; /&gt;
 
-    &lt;ul class=&quot;list-group&quot;&gt;
+    &lt;ul&gt;
         &lt;aura:iteration items=&quot;{!v.contacts}&quot; var=&quot;contact&quot;&gt;
-            &lt;li class=&quot;list-group-item&quot;&gt;
-                &lt;a href=&quot;{! &#39;#contact/&#39; + contact.Id }&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;{! &#39;#/sObject/&#39; + contact.Id + &#39;/view&#39;}&quot;&gt;
                     &lt;p&gt;{!contact.Name}&lt;/p&gt;
                     &lt;p&gt;{!contact.Phone}&lt;/p&gt;
                 &lt;/a&gt;
@@ -150,14 +150,12 @@
 <p>If you don&#39;t see the tab in the developer console, select <strong>File</strong> &gt; <strong>Open Lightning Resources</strong> in the Developer Console menu, select <strong>QuickContacts</strong> &gt; <strong>COMPONENT</strong> in the dialog, and click the <strong>Open Selected</strong> button.</p>
 
 <p><img src="images/lightning-resources.jpg" alt=""></p></li>
-<li><p>Modify the <strong>container</strong> div as follows to add the ContactList component to the component layout.</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;div class=&quot;container&quot;&gt;
-    &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col-sm-12&quot;&gt;
-            &lt;c:ContactList/&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<li><p>Replace the ContactList placeholder with the actual component:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">&lt;aura:component implements=&quot;force:appHostable&quot;&gt;
+
+    &lt;c:ContactList/&gt;
+
+&lt;/aura:component&gt;
 </code></pre></div></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
 <li><p>Go back to the Salesforce1 app and reload <strong>Quick Contacts</strong> from the menu to see the changes:</p>
@@ -167,15 +165,26 @@
 
 <h2>Step 4: Style the ContactList Component</h2>
 
-<p>There is probably too much space above and below the phone number. In this step, you&#39;ll add a style to the component to remove the extra space.</p>
+<p>In this step, you&#39;ll add some CSS styles to the component to make it look more like a standard mobile list. You&#39;ll remove the item bullets, add a horizontal line between items, and fine tune margins.</p>
 
 <ol>
 <li><p>Click <strong>STYLE</strong></p>
 
 <p><img src="images/component-style.jpg" alt=""></p></li>
-<li><p>Implement the following style:</p>
-<div class="highlight"><pre><code class="text language-text" data-lang="text">.THIS p {
+<li><p>Implement the following styles:</p>
+<div class="highlight"><pre><code class="text language-text" data-lang="text">.THIS {
+    list-style-type: none;
+    padding: 0;
     margin: 0;
+}
+
+.THIS li {
+    border-bottom: solid 1px #DDDDDD;
+    padding: 8px;
+}
+
+.THIS p {
+    margin: 4px;
 }
 </code></pre></div></li>
 <li><p>Click <strong>File</strong> &gt; <strong>Save</strong> to save the file</p></li>
@@ -222,7 +231,6 @@
             <!-- Default panel contents -->
             <div class="panel-heading" style="font-variant:small-caps;font-size: 18px;">modules</div>
             <ol class="list-group">
-                <li><a href="create-developer-edition.html">Creating a Developer Edition Account</a></li>
                 <li><a href="setup-environment.html">Setting Up Your Environment</a></li>
                 <li><a href="create-apex-controller.html">Creating a Lightning-Enabled Apex Controller</a></li>
                 <li><a href="create-lightning-application.html">Creating the QuickContacts Component</a></li>
@@ -234,7 +242,7 @@
                 <a href="next.html">Next Steps</a>
             </div>
         </div>
-<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://ccoenraets.github.io/salesforce-lightning-tutorial" data-text="Salesforce Lightning Components Tutorial">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://developerforce.io/lightning-components-tutorial" data-text="Salesforce Lightning Components Tutorial">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 

@@ -2,23 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d943dfe-f66a-4325-87cf-2aa0b79757a2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/images/lightning-resources.jpg" afterPath="$PROJECT_DIR$/_site/images/lightning-resources.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/lightning-resources.jpg" afterPath="$PROJECT_DIR$/images/lightning-resources.jpg" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/create-contactdetails-component.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/_site/create-developer-edition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/create-contactdetails-component.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/create-developer-edition.md" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/images/version1.jpg" afterPath="$PROJECT_DIR$/_site/images/version1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/version1.jpg" afterPath="$PROJECT_DIR$/images/version1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/images/version2.jpg" afterPath="$PROJECT_DIR$/_site/images/version2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/version2.jpg" afterPath="$PROJECT_DIR$/images/version2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/images/version3.jpg" afterPath="$PROJECT_DIR$/_site/images/version3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/version3.jpg" afterPath="$PROJECT_DIR$/images/version3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/images/version4.jpg" afterPath="$PROJECT_DIR$/_site/images/version4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/version4.jpg" afterPath="$PROJECT_DIR$/images/version4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/bootstrap-header.html" afterPath="$PROJECT_DIR$/_includes/bootstrap-header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-apex-controller.html" afterPath="$PROJECT_DIR$/_site/create-apex-controller.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-contactdetails-component.html" afterPath="$PROJECT_DIR$/_site/create-contactdetails-component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-apex-controller.md" afterPath="$PROJECT_DIR$/create-apex-controller.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-contactlist-component.html" afterPath="$PROJECT_DIR$/_site/create-contactlist-component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-contactlist-component.md" afterPath="$PROJECT_DIR$/create-contactlist-component.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-developer-edition.html" afterPath="$PROJECT_DIR$/_site/create-developer-edition.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-lightning-application.html" afterPath="$PROJECT_DIR$/_site/create-lightning-application.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-lightning-application.md" afterPath="$PROJECT_DIR$/create-lightning-application.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/create-searchbar-component.html" afterPath="$PROJECT_DIR$/_site/create-searchbar-component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create-searchbar-component.md" afterPath="$PROJECT_DIR$/create-searchbar-component.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/home.html" afterPath="$PROJECT_DIR$/_layouts/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/index.html" afterPath="$PROJECT_DIR$/_site/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.md" afterPath="$PROJECT_DIR$/index.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_layouts/module.html" afterPath="$PROJECT_DIR$/_layouts/module.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/next.html" afterPath="$PROJECT_DIR$/_site/next.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/next.md" afterPath="$PROJECT_DIR$/next.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_site/setup-environment.html" afterPath="$PROJECT_DIR$/_site/setup-environment.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup-environment.md" afterPath="$PROJECT_DIR$/setup-environment.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="lightning-components-tutorial.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +58,21 @@
       <file leaf-file-name="setup-environment.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup-environment.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.0" vertical-offset="0" max-vertical-offset="810">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="-21.5" vertical-offset="0" max-vertical-offset="780">
+              <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create-apex-controller.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="975">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -58,8 +84,8 @@
       <file leaf-file-name="create-lightning-application.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.946428" vertical-offset="0" max-vertical-offset="1605">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state vertical-scroll-proportion="-8.321428" vertical-offset="134" max-vertical-offset="1320">
+              <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -71,8 +97,8 @@
       <file leaf-file-name="create-searchbar-component.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-searchbar-component.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.857142" vertical-offset="1155" max-vertical-offset="2415">
-              <caret line="125" column="27" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
+            <state vertical-scroll-proportion="-14.75" vertical-offset="1154" max-vertical-offset="2730">
+              <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -81,11 +107,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="bootstrap-header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/bootstrap-header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-38.75" vertical-offset="0" max-vertical-offset="1020">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="690">
-              <caret line="4" column="234" selection-start-line="4" selection-start-column="234" selection-end-line="4" selection-end-column="234" />
+            <state vertical-scroll-proportion="-19.5" vertical-offset="0" max-vertical-offset="690">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -97,8 +133,8 @@
       <file leaf-file-name="create-contactlist-component.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/create-contactlist-component.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.714285" vertical-offset="913" max-vertical-offset="2160">
-              <caret line="127" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.53571427" vertical-offset="0" max-vertical-offset="2325">
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -107,18 +143,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version3.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/version3.jpg">
-          <provider selected="true" editor-type-id="images">
+      <file leaf-file-name="module.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="1035">
+              <caret line="51" column="147" selection-start-line="51" selection-start-column="147" selection-end-line="51" selection-end-column="147" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="next.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/next.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27522936" vertical-offset="0" max-vertical-offset="1199">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_layouts/module.html">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_layouts/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5340557" vertical-offset="0" max-vertical-offset="1292">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="675">
+              <caret line="23" column="159" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="159" />
               <folding />
             </state>
           </provider>
@@ -132,11 +184,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/create-developer-edition.md" />
+        <option value="$PROJECT_DIR$/create-apex-controller.md" />
         <option value="$PROJECT_DIR$/create-contactlist-component.md" />
-        <option value="$PROJECT_DIR$/create-lightning-application.md" />
-        <option value="$PROJECT_DIR$/create-searchbar-component.md" />
+        <option value="$PROJECT_DIR$/_includes/bootstrap-header.html" />
         <option value="$PROJECT_DIR$/index.md" />
+        <option value="$PROJECT_DIR$/create-searchbar-component.md" />
+        <option value="$PROJECT_DIR$/_layouts/home.html" />
         <option value="$PROJECT_DIR$/_layouts/module.html" />
+        <option value="$PROJECT_DIR$/setup-environment.md" />
+        <option value="$PROJECT_DIR$/create-lightning-application.md" />
+        <option value="$PROJECT_DIR$/next.md" />
       </list>
     </option>
   </component>
@@ -144,10 +202,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1917" />
+    <option name="x" value="1795" />
     <option name="y" value="-382" />
-    <option name="width" value="1452" />
-    <option name="height" value="1413" />
+    <option name="width" value="1843" />
+    <option name="height" value="1339" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -200,7 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="_layouts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -214,7 +272,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_layouts" />
+              <option name="myItemId" value="_includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -279,7 +337,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1917" y="-382" width="1452" height="1413" extended-state="6" />
+    <frame x="1795" y="-382" width="1843" height="1339" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -287,7 +345,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22176309" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17471513" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -323,26 +381,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/setup-environment.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.0" vertical-offset="0" max-vertical-offset="810">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/version3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
+    <entry file="file://$PROJECT_DIR$/images/version1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-apex-controller.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.946428" vertical-offset="0" max-vertical-offset="1605">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+        <state vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -352,8 +404,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-contactlist-component.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.714285" vertical-offset="913" max-vertical-offset="2160">
-          <caret line="127" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.53571427" vertical-offset="0" max-vertical-offset="2325">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/bootstrap-header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-38.75" vertical-offset="0" max-vertical-offset="1020">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.5" vertical-offset="0" max-vertical-offset="690">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -363,8 +434,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/create-searchbar-component.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.857142" vertical-offset="1155" max-vertical-offset="2415">
-          <caret line="125" column="27" selection-start-line="125" selection-start-column="27" selection-end-line="125" selection-end-column="27" />
+        <state vertical-scroll-proportion="-14.75" vertical-offset="1154" max-vertical-offset="2730">
+          <caret line="132" column="0" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -372,23 +443,53 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.md">
+    <entry file="file://$PROJECT_DIR$/_layouts/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.0" vertical-offset="0" max-vertical-offset="690">
-          <caret line="4" column="234" selection-start-line="4" selection-start-column="234" selection-end-line="4" selection-end-column="234" />
+        <state vertical-scroll-proportion="-6.9" vertical-offset="0" max-vertical-offset="675">
+          <caret line="23" column="159" selection-start-line="23" selection-start-column="105" selection-end-line="23" selection-end-column="159" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_layouts/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5340557" vertical-offset="0" max-vertical-offset="1292">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="-31.875" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="51" column="147" selection-start-line="51" selection-start-column="147" selection-end-line="51" selection-end-column="147" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup-environment.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.5" vertical-offset="0" max-vertical-offset="780">
+          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/create-lightning-application.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.321428" vertical-offset="134" max-vertical-offset="1320">
+          <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27522936" vertical-offset="0" max-vertical-offset="1199">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
