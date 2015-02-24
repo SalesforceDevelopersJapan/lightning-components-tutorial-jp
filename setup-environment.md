@@ -10,7 +10,7 @@ In this module, you create a Developer Edition Account that provides you with a 
 
 ## Step 1: Creating a Developer Edition Account
 
-> Even if you already signed up for a Developer Edition account, it is **strongly recommended** that you sign up for a new Developer Edition account for this tutorial.
+> Even if you already signed up for a Developer Edition account, it is **strongly recommended** that you sign up for a new Developer Edition account for this tutorial.Some of the steps in this tutorial may break some of the work you already did with your existing account.
 
 1. Open a browser and access the following URL: [http://developer.salesforce.com/signup](http://developer.salesforce.com/signup)
 
