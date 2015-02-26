@@ -18,7 +18,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 2. Implement the component as follows:
 
     ```
-    <aura:component controller="ContactController">
+    <aura:component controller="ContactListController">
 
         <aura:attribute name="contacts" type="Contact[]"/>
         <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
@@ -38,7 +38,7 @@ In this module, you create a Lightning Component responsible for displaying the 
     ```
 
     ### Code Highlights:
-    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactController) you created in module 2.
+    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactListController) you created in module 2.
     - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
     - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
 **client-side controller** (you'll implement the controller in the next step).
@@ -70,7 +70,7 @@ In this module, you create a Lightning Component responsible for displaying the 
 
     ### Code Highlights:
     - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactController), and store it in the **action** variable.
+    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactListController), and store it in the **action** variable.
     - Since the call to the server's findAll() method is asynchronous, you then register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts to the component's **contacts** attribute.
     - $A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
 
