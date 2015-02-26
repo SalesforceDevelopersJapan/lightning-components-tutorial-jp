@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Module 2&#58; Creating the ContactController Class
+title: Module 2&#58; Creating the ContactListController Class
 ---
 
 Lightning applications make it easy to work with data. In this module, you create an Apex controller that allows your Lightning application to retrieve contacts, or to search contacts by name or by id.
@@ -15,12 +15,12 @@ Lightning applications make it easy to work with data. In this module, you creat
 
     ![](images/devconsole.jpg)
 
-1. In the Developer Console, click **File** > **New** > **Apex Class**. Specify **ContactController** as the class name and click **OK**.
+1. In the Developer Console, click **File** > **New** > **Apex Class**. Specify **ContactListController** as the class name and click **OK**.
 
 2. Implement the class as follows:
 
     ```java
-    public with sharing class ContactController {
+    public with sharing class ContactListController {
 
         @AuraEnabled
         public static List<Contact> findAll() {
@@ -45,7 +45,7 @@ Lightning applications make it easy to work with data. In this module, you creat
 
 
     ### Code Highlights:
-    - **ContactController** is a regular controller class with methods to retrieve contacts (findAll),  or to search contacts by name (findByName) or by id (findById).
+    - **ContactListController** is a regular controller class with methods to retrieve contacts (findAll),  or to search contacts by name (findByName) or by id (findById).
     - The **@AuraEnabled** method annotation makes a method available to Lightning applications
 
 1. Click **File** > **Save** to save the file
