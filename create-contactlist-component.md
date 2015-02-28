@@ -1,21 +1,21 @@
 ---
 layout: module
-title: Module 4&#58; Creating the ContactList Component
+title: モジュール 4&#58; ContactList コンポーネントの作成
 ---
 
-In this module, you create a Lightning Component responsible for displaying the list of contacts and you add the ContactList component to the QuickContacts component.
+このモジュールでは、取引先責任者のリストの表示を行うLightning コンポーネントを作成し、このContactList　コンポーネントを QuickContacts へ追加します。
 
-## What you will learn
-- Use component attributes
-- Use event handlers
-- Use a Lightning Component in another Lightning Component
+## 何を学ぶことができるか
+- コンポーネント属性の使用方法
+- イベントハンドラの使用方法
+- Lightningコンポーネントの他のLightningコンポーネント内での利用方法
 
 
-## Step 1: Create the Component
+## ステップ 1: コンポーネントの作成
 
-1. In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **ContactList** as the bundle name and click **Submit**
+1. 開発者コンソールにて **File** > **New** > **Lightning Component** をクリックします。 **ContactList** をバンドル名に設定し **Submit** をクリックします。
 
-2. Implement the component as follows:
+2. コンポーネントを以下のように入力します:
 
     ```
     <aura:component controller="ContactListController">
@@ -37,24 +37,23 @@ In this module, you create a Lightning Component responsible for displaying the 
     </aura:component>
     ```
 
-    ### Code Highlights:
-    - The controller assigned to the component (first line of code) refers to the **server-side controller** (ContactListController) you created in module 2.
-    - The **contacts** attribute is defined to hold the list of Contact objects returned from the server.
-    - The **init** handler is defined to execute some code when the component is initialized. That code (**doInit**) is defined in the component's
-**client-side controller** (you'll implement the controller in the next step).
-    - ```<aura:iteration>``` is used to iterate through the list of contacts and create an ```<li>``` for each contact
+    ### コードハイライト:
+    - コントローラはコンポーネントにアサインされ (コードの一行目)、モジュール2で作成した **サーバサイドコントローラ** (ContactListController)　へ参照が行われます。
+    - **contacts** 属性は、サーバから送られてくる取引先責任者のリストオブジェクトを保持するために定義されています。
+    - **init** ハンドラはコンポーネントの初期化が行われた際にコードを実行するために定義されています。 (**doInit**) のコードは、コンポーネント内の　**クライアントサイドコントローラ** に定義されています。(次のステップでこのコントローラを実装します)
+    - ```<aura:iteration>``` は取引先責任者のリストを繰り返し処理するために利用され、 ```<li>``` タグを取引先ごとに生成します。
 
 
-1. Click **File** > **Save** to save the file.
+1.  **File** > **Save** をクリックしファイルを保存します。
 
 
-## Step 2: Implement the Controller
+## ステップ 2: コントローラの実装
 
-1. Click **CONTROLLER**
+1. **CONTROLLER** をクリックします。
 
     ![](images/component-controller.jpg)
 
-1. Implement the Controller as follows:
+1. コントローラを以下の様に実装します:
 
     ```
     ({
@@ -68,25 +67,25 @@ In this module, you create a Lightning Component responsible for displaying the 
     })
     ```
 
-    ### Code Highlights:
-    - The controller has a single function called **doInit**. This is the function the component calls when it is initialized.
-    - You first get a reference to the **findAll()** method in the component's server-side controller (ContactListController), and store it in the **action** variable.
-    - Since the call to the server's findAll() method is asynchronous, you then register a callback function that is executed when the call returns. In the callback function, you simply assign the list of contacts to the component's **contacts** attribute.
-    - $A.enqueueAction(action) sends the request the server. More precisely, it adds the call to the queue of asynchronous server calls. That queue is an optimization feature of Lightning.
+    ### コードハイライト:
+    - コントローラは**doInit** と定義される関数を１つ持っています。この関数はコンポーネントが初期化されるタイミングで、コンポーネントより呼び出されます。
+    - まず最初に **findAll()** メソッドの参照をコンポーネントのサーバサイドコントローラ (ContactListController)より取得し、**action** 変数に保持しています。
+    - サーバへのfindAll() メソッド呼び出しは非同期に行われるので、この場合実行結果が戻ってきた際のコールバック関数を定義します。コールバック関数内では、シンプルに取引先責任者のリストをコンポーネントの **contacts** 属性にアサインしています。
+    - $A.enqueueAction(action) はサーバへリクエストを送信します。より正確には、非同期サーバコールをキューへ追加します。 このキューではLightningの最適化機能が働きます。
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしてファイルを保存します。
 
 
-## Step 3: Add ContactList to the QuickContacts Component
+## ステップ 3: ContactList をQuickContacts コンポーネントへ追加する
 
-1. In the developer console, go back to the **QuickContacts** component.
+1. 開発者コンソールで、**QuickContacts**　コンポーネントへ戻ります。
 
-    If you don't see the tab in the developer console, click **File** > **Open Lightning Resources** in the Developer Console menu, select **QuickContacts** > **COMPONENT** in the dialog, and click the **Open Selected** button.
+    もしタブが開発者コンソール内で見つからない場合は、開発者コンソールメニューの **File** > **Open Lightning Resources** をクリックし、 **QuickContacts** > **COMPONENT** をダイアログ内で選択し、 **Open Selected** ボタンをクリックします。
 
     ![](images/lightning-resources.jpg)
 
 
-1. Replace the ContactList placeholder with the actual component:
+1. ContactList のプレースホルダを実際のコンポーネントで上書きします:
 
     ```
     <aura:component implements="force:appHostable">
@@ -96,25 +95,25 @@ In this module, you create a Lightning Component responsible for displaying the 
     </aura:component>
     ```
 
-    > **c:** is the default namespace for Lightning components
+    > **c:** はLightningコンポーネントの標準名前空間を指します。
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしファイルを保存します。
 
-1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes:
+1. Salesforce1 アプリへ戻り、メニューより **Quick Contacts**を再読み込みし、変更を確認します:
 
     ![](images/version2.jpg)
 
 
-## Step 4: Style the ContactList Component
+## ステップ 4: ContactList コンポーネントにスタイルを設定する
 
-In this step, you'll add some CSS styles to the component to make it look like a standard mobile list. You'll remove the item bullets, add a horizontal line between items, and fine tune margins.
+このステップでは、標準のモバイルでのリストに見えるようにいくつかのCSSスタイルをコンポーネントへ追加します。アイテムごとのバレットを消去し、アイテム毎に水平線を追加し、マージンを最適化します。
 
 
-1. Click **STYLE**
+1. **STYLE** をクリックします
 
     ![](images/component-style.jpg)
 
-1. Implement the following styles:
+1. 以下のようにスタイルを実装します:
 
     ```
     .THIS {
@@ -133,9 +132,9 @@ In this step, you'll add some CSS styles to the component to make it look like a
     }
     ```
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしファイルを保存します。
 
-1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes:
+1. Salesforce1 アプリへ戻り、メニューより再読み込みして **Quick Contacts** の変更を確認します:
 
     ![](images/version3.jpg)
 
@@ -143,7 +142,7 @@ In this step, you'll add some CSS styles to the component to make it look like a
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-lightning-application.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-searchbar-component.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-lightning-application.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="create-searchbar-component.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

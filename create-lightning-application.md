@@ -1,20 +1,20 @@
 ---
 layout: module
-title: Module 3&#58; Creating the QuickContacts Lightning Component
+title: モジュール 3&#58; QuickContacts Lightning コンポーネントの作成
 ---
 
-In this module, you create the QuickContacts Lightning Component.
+このモジュールでは, QuickContacts Lightning コンポーネントを作成します
 
-## What you will learn
-- Create a Lightning Component in the Developer Console
-- Preview your Lightning Component in the Salesforce1 Application
+## 何を学ぶことができるか
+- 開発者コンソール内でのLightning コンポーネント作成方法
+- Salesforce1アプリケーション内でのLightning コンポーネントの確認方法
 
 
-## Step 1: Create the Component
+## ステップ 1: コンポーネントの作成
 
-1. In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **QuickContacts** as the bundle name and click **Submit**
+1. 開発者コンソールにて **File** > **New** > **Lightning Component** をクリックし、 **QuickContacts** をバンドル名に入力し、 **Submit** をクリックします。
 
-2. Implement the component as follows:
+2. コンポーネントは以下の様に実装します:
 
     ```
     <aura:component implements="force:appHostable">
@@ -24,61 +24,61 @@ In this module, you create the QuickContacts Lightning Component.
     </aura:component>
     ```
 
-    ### Code Highlights:
-    - The component implements the **force:appHostable** interface to indicate that it can run in the Salesforce1 application
-    - Lightning components can include other Lightning components and regular HTML markup
+    ### コードハイライト:
+    - コンポーネントはSalesforce1アプリケーションで実行可能なことを示すために **force:appHostable** インタフェースに対して実装されています。
+    - Lightning コンポーネントは他のLightningコンポーネントや、通常のHTMLマークアップを含むことが可能です。
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックし変更を保存します。
 
 
-## Step 2: Create a Tab
+## ステップ 2: タブの作成
 
-1. In Setup, click **Create** > **Tabs**
+1. 設定画面より **作成** > **タブ** をクリックします
 
-1. In the **Lightning Component Tabs** section, click **New**
+1. **Lightning コンポーネントタブ** セクションより **新規** をクリックします
 
     ![](images/lightning-component-tab.jpg)
-    - Select **c:QuickContacts** as the Lightning Component
-    - Specify **Quick Contacts** as the Tab Label and **Quick_Contacts** as the Tab Name
-    - Click the magnifier icon and select **Lightning** as the tab icon
+    - **c:QuickContacts** をLightning コンポーネントに選択します
+    - タブの表示ラベルには**クイック取引先責任者** を設定し **Quick_Contacts** をタブ名に設定します。
+    - 虫眼鏡アイコンをクリックし **稲妻** をタブアイコンに設定します
 
-1. Click **Next** and **Save**
+1. **次へ** 及び **保存** をクリックします。
 
 
-## Step 3: Add the Tab to Mobile Navigation
+## ステップ 3: モバイルナビゲーションへタブを追加
 
-1. In Setup, Select **Administer** > **Mobile Administration** > **Mobile Navigation**
+1. このステップでは **管理** > **モバイル管理** > **モバイルナビゲーション** を設定します
 
     ![](images/mobile_nav.jpg)
-    - Select **Quick Contacts** in the **Available** list
-    - Click **Add**
-    - Select  **Quick Contacts** in the **Selected** List, and click the **Up** button to move the tab up in the menu order
-    - Click **Save**
+    - **クイック取引先責任者** を **選択可能** のリストから選択します
+    - **追加** をクリックします
+    - **選択済み** リストの中から **クイック取引先責任者** を選択し、 **上へ** ボタンをクリックして、メニュー内の順序を上位へ変更します。
+    - **保存** をクリックします。
 
 
-## Step 4: Preview the Component in the Salesforce1 Application
+## ステップ 4: Salesforce1アプリケーションでコンポーネントをプレビューする
 
-1. In Salesforce, modify the URL as follows:
+1. Salesforceへアクセス以下のようにURLを変更します:
 
     ![](images/oneapp.jpg)
-    - Remove the part of the URL that comes immediately after salesforce.com
-    - Append /one/one.app to the URL immediately after salesforce.com
+    - URLからsalesforce.com以降の部分をすべて削除します
+    - /one/one.app to をsalesforce.com以降のURLとして追加します
 
-    > This starts the Salesforce1 Application simulator
+    > Salesforce1アプリケーションシュミレータが起動します
 
-1. Click the menu button in the upper left corner
+1. 左上隅のメニューボタンをクリックします
 
-1. Select **Quick Contacts** in the menu
+1. メニュー内の**クイック取引先責任者** をクリックします
 
     ![](images/s1menu.jpg)
 
-1. Preview the component
+1. コンポーネントを確認します
 
     ![](images/version1.jpg)
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-apex-controller.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-contactlist-component.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-apex-controller.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="create-contactlist-component.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

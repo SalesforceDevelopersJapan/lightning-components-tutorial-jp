@@ -1,23 +1,23 @@
 ---
 layout: module
-title: Module 2&#58; Creating the ContactListController Class
+title: モジュール 2&#58; ContactListControllerクラスの作成
 ---
 
-Lightning applications make it easy to work with data. In this module, you create an Apex controller that allows your Lightning application to retrieve contacts, or to search contacts by name or by id.
+Lightning アプリケーションではデータの取り扱いも簡単に行えます。このモジュールでは、Lightningアプリケーションが取引先責任者を一覧取得や名前やIDを使って検索を行えるApexコントローラの作成を行います。
 
-## What you will learn
-- Create an Apex Controller that exposes data and logic to the client application
+## 何を学ぶことができるか
+- Apexコントローラを作成し、データ及びロジックをクライアントアプリケーションへ提供する
 
 
-## Steps
+## ステップ
 
-1. In Salesforce, click your name in the upper right corner of the screen. In the dropdown menu, click **Developer Console**.
+1. Salesforce内にて、画面右上隅の名前をクリックします。ドロップダウンメニューより **開発者コンソール** をクリックします。
 
     ![](images/devconsole.jpg)
 
-1. In the Developer Console, click **File** > **New** > **Apex Class**. Specify **ContactListController** as the class name and click **OK**.
+1. 開発者コンソール内にて **File** > **New** > **Apex Class**　をクリックします。　**ContactListController** をクラス名に入力し、 **OK** をクリックします。
 
-2. Implement the class as follows:
+2. 以下のようにクラスを実装します:
 
     ```java
     public with sharing class ContactListController {
@@ -44,16 +44,16 @@ Lightning applications make it easy to work with data. In this module, you creat
     ```
 
 
-    ### Code Highlights:
-    - **ContactListController** is a regular controller class with methods to retrieve contacts (findAll),  or to search contacts by name (findByName) or by id (findById).
-    - The **@AuraEnabled** method annotation makes a method available to Lightning applications
+    ### コードハイライト:
+    - **ContactListController** は通常の今トーラクラスで、取引先責任者をリストで取得するメソッド　(findAll)や、名前で検索 (findByName) 、Idで検索 (findById)　などのメソッドを持っています。
+    - **@AuraEnabled** メソッドアノテーションはメソッドがLightningアプリケーションから呼び出せることを示します。
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしファイルを保存します。
 
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="setup-environment.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="create-lightning-application.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="setup-environment.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="create-lightning-application.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
