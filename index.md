@@ -8,7 +8,7 @@ title: Salesforce Lightning コンポーネントチュートリアル
 <img src="images/napkin.png" style="border:none;"/>
 </div>
 
-## 何を学ぶことができる
+## 何を学ぶことができるか
 
 - Salesforce組織でのLightning コンポーネントの有効化
 - Lightningアプリケーションでデータやロジックを使用するためのApexコントローラの作成
@@ -21,12 +21,12 @@ title: Salesforce Lightning コンポーネントチュートリアル
 
 ## ブラウザ要件
 
-The following browsers are supported when working with the Developer Console:
+以下のブラウザが開発者コンソールではサポートされています:
 
-  - Most recent version of Google Chrome
-  - Most recent version of Mozilla Firefox
-  - Most recent version of Safari
-  - Internet Explorer 9 or higher
+  - 最新バージョンのGoogle Chrome
+  - 最新バージョンのMozilla Firefox
+  - 最新バージョンのSafari
+  - Internet Explorer 9 以降
 
 ## 問題
 
