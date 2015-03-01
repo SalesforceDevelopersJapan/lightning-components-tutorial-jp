@@ -1,22 +1,24 @@
 ---
 layout: module
-title: Module 5&#58; Creating the SearchBar Component
+title: モジュール 5&#58; SearchBar コンポーネントの作成
 ---
 
-In this module, you create a SearchBar component that allows the user to search contacts by name. You could add the search bar to the ContactList component, but that would limit the reusability of the component: depending on specific UI requirements, you may want the search bar to be directly on top of the list (like you'll do here), integrated in the header, or somewhere else. You also want the ContactList component to be able to display a list of contacts independently of the type of search bar you use: regular input field with search button, type ahead search, etc. For these reasons, it's a good idea to decouple the search UI, from the display UI, and create two components: ContactList and SearchBar.
+このモジュールでは、名前から取引先責任者を検索することの出来る SearchBar コンポーネントを作成します。ContactListコンポーネントに検索バーを追加することも可能ですが、コンポーネントの再利用性に制限をかけてしまう恐れがあります: 例えば特定のUI要求で検索バーをリストのトップに置いておきたい、ヘッダーと統合したい、またはどこか別の場所に設置したいなどや、通常の入力フィールドと検索ボタン以外にも検索自動補完等を付けたい場合など、その要件は様々です。
+このような場合 ContactList コンポーネントは検索バーのようなものとは独立して取引先責任者をリスト表示できるようにすべきでしょう。そのため、今回は ContactList 及び SearchBar の2種類のコンポーネントを作成します。
 
-## What you will learn
+## 何を学ぶことができるか
 
-- Create custom Lightning Events
-- Communicate between components using events
+- Lightning イベントの作成
+- イベントを使ったコンポーネント間のやりとり
 
-## Step 1: Create the SearchKeyChange Event:
+## ステップ 1: SearchKeyChange イベントの作成:
 
-Now that we decided to build SearchBar and ContactList as two separate components, we need a way for ContactList to know when the search key changes so that it can retrieve and display the matching contacts. Lightning Events enable that kind of communication between components. In this step, you create a Lightning Event used by the SearchBar component to notify other components when the search key changes.
+ここでSearchBar 及び ContactList という２つの別々のコンポーネントを作成することが決まった所で、ContactList は検索文字が変わった際にはそれを知り、該当する取引先責任者を表示しなおす必要があります。Lightning イベントを使うとこのようなコンポーネント間のやりとりを可能にします。
+このステップでは、SearchBar コンポーネントが、検索条件が代わった際に他のコンポーネントに通知するためのLightning Eventを作成します。
 
-1. In the Developer Console, click **File** > **New** > **Lightning Event**. Specify **SearchKeyChange** as the bundle name and click **Submit**
+1. 開発者コンソールにて **File** > **New** > **Lightning Event** をクリックし **SearchKeyChange** をバンドル名に入力し **Submit** をクリックします。
 
-1. Implement the event as follows:
+1. イベントを以下の様に実装します:
 
     ```
     <aura:event type="APPLICATION">
@@ -26,13 +28,13 @@ Now that we decided to build SearchBar and ContactList as two separate component
     ### Code Highlights:
     - The event holds one argument: the new **searchKey**
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしファイルを保存します。
 
-## Step 2: Create the SearchBar Component
+## ステップ 2: SearchBar コンポーネントの作成
 
-1. In the Developer Console, click **File** > **New** > **Lightning Component**. Specify **SearchBar** as the bundle name and click **Submit**
+1. 開発者コンソールにて **File** > **New** > **Lightning Component**　をクリックし、 **SearchBar** をバンドル名に設定して **Submit** をクリックします
 
-2. Implement the component as follows:
+2. コンポーネントは以下のように実装します:
 
     ```
     <aura:component>
@@ -44,18 +46,18 @@ Now that we decided to build SearchBar and ContactList as two separate component
 
     </aura:component>
     ```
-    ### Code Highlights:
-    - This is a simple component with a single input field.
-    - When the user types in a character (**onkeyup**), the **searchKeyChange()** function is executed in the component's client-side controller (you'll code that function in the next step). Using this approach the search is refined every time the user types in a character.
+    ### コードハイライト:
+    -これは単一のインプット項目を持つサンプルコンポーネントです
+    - ユーザが何か文字を入力した際 (**onkeyup**) 、 **searchKeyChange()** 関数がコンポーネントのクライアントサイドコントローラで実行されます (次のステップでこの関数をコーディングします)。 このアプローチでは、ユーザがキーボードを入力するたびに検索が再実行されます。
 
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしてファイルを保存します。
 
-## Step 3: Implement the Controller
+## Step 3: コントローラの実装
 
-1. Click **CONTROLLER** (upper right corner in the code editor)
+1. **CONTROLLER** をクリックします(コードエディタ内の右上隅)
 
-1. Implement the Controller as follows:
+1. 以下の様にコントローラを実装します:
 
     ```
     ({
@@ -67,21 +69,21 @@ Now that we decided to build SearchBar and ContactList as two separate component
     })
     ```
 
-    ### Code Highlights:
-    - The function first gets an instance of the **SearchKeyChange** event
-    - It then sets the event's searchKey parameter to the input field's new value
-    - Finally, it fires the event so that registered listeners can catch it
+    ### コードハイライト:
+    - 関数はまず **SearchKeyChange** イベントのインスタンスを取得します
+    - その際、イベントのsearchKeyパラメータに入力フィールドの新しい値を取得し、設定します
+    - 最後にイベントを発火し、登録済みのリスナーはそれを受け取ることができます。
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしてファイルを保存します
 
 
-## Step 4: Style the Component
+## Step 4: コンポーネントにスタイルを設定する
 
-1. Click **STYLE**
+1. **STYLE** をクリックします
 
     ![](images/searchbar-style.jpg)
 
-1. Implement the following styles:
+1. 以下のようにスタイルを実装します:
 
     ```
     .THIS {
@@ -97,25 +99,25 @@ Now that we decided to build SearchBar and ContactList as two separate component
     }
     ```
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしファイルを保存します
 
-## Step 5: Listen for the SearchKeyChange Event in ContactList
+## ステップ 5: SearchKeyChange イベントを ContactList で購読する
 
-1. In the Developer Console, go back to the **ContactList** component
+1. 開発者コンソールにて、**ContactList** コンポーネントへ戻ります
 
-1. Add an event handler for the **SearchKeyChange** event (right after the init handler):
+1. **SearchKeyChange** イベントのためのイベントハンドラを追加します (initハンドラのすぐ後に):
 
     ```
     <aura:handler event="c:SearchKeyChange" action="{!c.searchKeyChange}"/>
     ```
 
-    ### Code Highlight:
-    - The handler is set up to execute the **searchKeyChange()** function in the controller
+    ### コードハイライト:
+    - ハンドラはコントローラ内の **searchKeyChange()** 関数を呼ぶように設定されています。
 
 
-1. Click **CONTROLLER** (upper right corner in the code editor)
+1. **CONTROLLER** をクリックします(コードエディタ内の右上隅)
 
-1. Add the **searchKeyChange()** function implemented as follows:
+1. **searchKeyChange()** 関数を以下の様に実装します:
 
     ```
     searchKeyChange: function(component, event) {
@@ -131,21 +133,21 @@ Now that we decided to build SearchBar and ContactList as two separate component
     }
     ```
 
-    > Make sure you separate the doInit() and the searchKeyChange() functions with a comma
+    > doInit() 及び searchKeyChange() 関数がカンマによって区切られていることを確認して下さい
 
-    ### Code Highlights:
-    - You first get the value of the new searchKey available in the event object.
-    - You then invoke the **findByName()** method in the Apex controller you created in module 3.
-    - When the asynchronous call returns, you assign the list of contacts returned by findByName() to the component's **contacts** attribute.
+    ### コードハイライト:
+    - まず最初にイベントオブジェクトより有効なsearchKeyの値を取得します。
+    - その際にモジュール3で作成したApexコントローラ内の **findByName()** メソッドを呼び出します。
+    - 非同期コールが帰ってきた際に、コンポーネントの **contacts** 属性に対して、findByName()から返された取引先責任者のリストを設定します。
 
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしてファイルを保存します。
 
-## Step 6: Add SearchBar to the QuickContacts Component
+## ステップ 6: SearchBar を QuickContacts コンポーネントに追加する
 
-1. In the developer console, go back to the **QuickContacts** component
+1. 開発者コンソールにて、 **QuickContacts** コンポーネントに戻ります
 
-1. Add the SearchBar component before the ContactList component:
+1. SearchBar コンポーネントを ContactList コンポーネントの前に追加します:
 
     ```
     <aura:component implements="force:appHostable">
@@ -156,15 +158,15 @@ Now that we decided to build SearchBar and ContactList as two separate component
     </aura:component>
     ```
 
-1. Click **File** > **Save** to save the file
+1. **File** > **Save** をクリックしてファイルを保存します。
 
-1. Go back to the Salesforce1 app and reload **Quick Contacts** from the menu to see the changes. Type a few characters in the search bar to search for contacts.
+1. Salesforce1アプリに戻り**クイック取引先責任者** をメニューから再読み込みして変更を確認します。取引先責任者を検索するために、検索バーに文字を入力します。
 
     ![](images/version4.jpg)
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="create-contactlist-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> Previous</a>
-<a href="next.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="create-contactlist-component.html" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i> 戻る</a>
+<a href="next.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>

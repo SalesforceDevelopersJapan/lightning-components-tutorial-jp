@@ -1,25 +1,25 @@
 ---
 layout: home
-title: Salesforce Developer Workshop
+title: Salesforce Lightning コンポーネントチュートリアル
 ---
-In this tutorial, you use the Lightning Components to build a new feature "QuickContacts" feature in the Salesforce1 application. QuickContacts is a Lightning Component made of two other Lightning Components: SearchBar and ContactList. These components communicate using Lightning events.
+このチュートリアルでは、新しい "クイック取引先責任者(QuickContacts)" という機能をSalesforce1アプリケーション内に追加するためのLightning コンポーネントを作成します。 QuickContactsは2つの別のLightning コンポーネントによって構成されています: SearchBar 及び ContactList。これらのコンポーネントはLightning イベントを使ってやりとりを行います。
 
 <div style="width:100%;text-align:center;">
 <img src="images/napkin.png" style="border:none;"/>
 </div>
 
-## What You Will Learn
+## 何を学ぶことができる
 
-- Enable Lightning Components in your Salesforce org
-- Create an Apex Controller that exposes data and logic to Lightning Applications
-- Create Lightning Components
-- Create Lightning Events
-- Communicate between Lightning Components using Lightning Events
-- Use Static Resources in Lightning Components
+- Salesforce組織でのLightning コンポーネントの有効化
+- Lightningアプリケーションでデータやロジックを使用するためのApexコントローラの作成
+- Lightning コンポーネントの作成
+- Lightning イベントの作成
+- Lightning イベントを使ったLightning コンポーネント間のやりとり
+- Lightning コンポーネント内での静的リソースの使用
 
 
 
-## Browser Requirements
+## ブラウザ要件
 
 The following browsers are supported when working with the Developer Console:
 
@@ -28,15 +28,14 @@ The following browsers are supported when working with the Developer Console:
   - Most recent version of Safari
   - Internet Explorer 9 or higher
 
-## Issues
+## 問題
 
-- Please create an issue [here](https://github.com/ccoenraets/salesforce-lightning-tutorial/issues) if you run
-into any problem or if you have a suggestion to improve this workshop.
-- You can also use the Comments section at the bottom of each module to ask a question or report a problem.
+- もし問題やこのチュートリアルを改善するための提案がある場合には [こちら](https://github.com/salesforcedevelopersjapan/salesforce-lightning-tutorial/issues) に投稿してください。
+- または下にあるコメントセクションにて、質問や問題の報告を行うことも可能です。
 
 
 <div class="row" style="margin-top:40px;">
 <div class="col-sm-12">
-<a href="setup-environment.html" class="btn btn-default pull-right">Next <i class="glyphicon glyphicon-chevron-right"></i></a>
+<a href="setup-environment.html" class="btn btn-default pull-right">次へ <i class="glyphicon glyphicon-chevron-right"></i></a>
 </div>
 </div>
