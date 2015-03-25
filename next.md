@@ -8,7 +8,7 @@ title: 次のステップ
 
 更にいくつかの次のステップがあります:
 
-- もしこのチュートリアルを気に入ったならあb、ぜひほかの人々に紹介してあげて下さい:
+- もしこのチュートリアルを気に入ったら、ぜひほかの人々に紹介してあげて下さい:
 
     <a href="https://twitter.com/share" class="twitter-share-button" data-size="large" data-url="http://salesforcedevelopersjapan.github.io/lightning-components-tutorial" data-text="Salesforce Lightning コンポーネントチュートリアル">ツイート</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
