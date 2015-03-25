@@ -62,7 +62,7 @@ title: モジュール 3&#58; QuickContacts Lightning コンポーネントの�
 
     ![](images/oneapp.jpg)
     - URLからsalesforce.com以降の部分をすべて削除します
-    - /one/one.app to をsalesforce.com以降のURLとして追加します
+    - /one/one.app をsalesforce.com以降のURLとして追加します
 
     > Salesforce1アプリケーションシュミレータが起動します
 

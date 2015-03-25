@@ -30,7 +30,7 @@ title: Salesforce Lightning コンポーネントチュートリアル
 
 ## 問題
 
-- もし問題やこのチュートリアルを改善するための提案がある場合には [こちら](https://github.com/salesforcedevelopersjapan/salesforce-lightning-tutorial/issues) に投稿してください。
+- もし問題やこのチュートリアルを改善するための提案がある場合には [こちら](https://github.com/salesforcedevelopersjapan/lightning-components-tutorial/issues) に投稿してください。
 - または下にあるコメントセクションにて、質問や問題の報告を行うことも可能です。
 
 
