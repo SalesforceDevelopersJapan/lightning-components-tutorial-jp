@@ -3,7 +3,7 @@ layout: module
 title: モジュール 4&#58; ContactList コンポーネントの作成
 ---
 
-このモジュールでは、取引先責任者のリストの表示を行うLightning コンポーネントを作成し、このContactList　コンポーネントを QuickContacts へ追加します。
+このモジュールでは、取引先責任者のリストの表示を行うLightning コンポーネントを作成し、このContactList コンポーネントを QuickContacts へ追加します。
 
 ## 何を学ぶことができるか
 - コンポーネント属性の使用方法

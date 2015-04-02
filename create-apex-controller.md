@@ -45,7 +45,7 @@ Lightning アプリケーションではデータの取り扱いも簡単に行�
 
 
     ### コードハイライト:
-    - **ContactListController** は通常の今トーラクラスで、取引先責任者をリストで取得するメソッド　(findAll)や、名前で検索 (findByName) 、Idで検索 (findById)　などのメソッドを持っています。
+    - **ContactListController** は通常のコントローラクラスで、取引先責任者をリストで取得するメソッド　(findAll)や、名前で検索 (findByName) 、Idで検索 (findById)　などのメソッドを持っています。
     - **@AuraEnabled** メソッドアノテーションはメソッドがLightningアプリケーションから呼び出せることを示します。
 
 1. **File** > **Save** をクリックしファイルを保存します。
