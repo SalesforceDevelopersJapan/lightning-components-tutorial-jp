@@ -117,20 +117,29 @@ title: モジュール 5&#58; SearchBar コンポーネントの作成
 
 1. **CONTROLLER** をクリックします(コードエディタ内の右上隅)
 
-1. **searchKeyChange()** 関数を以下の様に実装します:
+1. **searchKeyChange()** 関数を以下の様に実装し、doInit()関数のすぐ後に追加します:
 
     ```
-    searchKeyChange: function(component, event) {
-        var searchKey = event.getParam("searchKey");
-        var action = component.get("c.findByName");
-        action.setParams({
-          "searchKey": searchKey
-        });
-        action.setCallback(this, function(a) {
-        	component.set("v.contacts", a.getReturnValue());
-        });
-        $A.enqueueAction(action);
-    }
+    ({
+        doInit : function(component, event) {
+            var action = component.get("c.findAll");
+            action.setCallback(this, function(a) {
+                component.set("v.contacts", a.getReturnValue());
+            });
+            $A.enqueueAction(action);
+        },
+        searchKeyChange: function(component, event) {
+            var searchKey = event.getParam("searchKey");
+            var action = component.get("c.findByName");
+            action.setParams({
+              "searchKey": searchKey
+            });
+            action.setCallback(this, function(a) {
+                component.set("v.contacts", a.getReturnValue());
+            });
+            $A.enqueueAction(action);
+    	}
+    })
     ```
 
     > doInit() 及び searchKeyChange() 関数がカンマによって区切られていることを確認して下さい
